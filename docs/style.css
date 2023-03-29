@@ -1,11 +1,45 @@
 body {
+    --text-colour: #f8f4ea;
+    --lighter-text-colour: #ece8dd;
+    --background-colour: #333;
+    --lighter-background-colour: #404040;
+    --lightest-background-colour: #808080;
+    --accent-color: #008cff;
+
     background-color: #333;
     color: #f8f4ea;
 }
 
-textarea {
-    background-color: #222;
-    color: #f8f4ea;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--accent-color);
+}
+
+table {
+    border-spacing: 0em 0.2em;
+    border: 0;
+}
+
+a:link,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 0.8em;
+    color: var(--lighter-text-colour);
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid var(--lighter-text-colour);
 }
 
 .left {

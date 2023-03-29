@@ -28,14 +28,14 @@
                 <input type="file" id="image-upload" name="image-upload" accept="image/*">
             </td>
         </tr>
-        <!-- <tr>
+        <tr>
             <td>
-                <label for="text">Background</label>
+                <label for="resize-checkbox">Resize?</label>
             </td>
             <td>
-                #<input type="text" id="background-color" name="background-color" placeholder="rrggbb" value="000000">
+                <input type="checkbox" id="resize-checkbox" name="resize-checkbox" checked>
             </td>
-        </tr> -->
+        </tr>
         <tr>
             <td>
                 <button id="generate-button">Generate</button>
@@ -49,6 +49,23 @@
             </td>
         </tr>
     </table>
+
+    <h2>
+        How to use
+    </h2>
+    <ol>
+        <li>Upload an image</li>
+        <li>Choose whether to automatically resize the image to fit in a thumbnail</li>
+        <li>Click "Generate"</li>
+        <li>Click "Download"</li>
+        <li>Import it with "Import level" in Exoracer</li>
+    </ol>
+
+    <footer>
+        <p>
+            Source code available on <a href="https://github.com/skycloudd/exo_image">GitHub</a>
+        </p>
+    </footer>
 </body>
 
 </html>
