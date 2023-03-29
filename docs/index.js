@@ -9,6 +9,8 @@ document.getElementById("generate-button").addEventListener("click", function ru
     r.onloadend = function (e) {
         var result = convert(e.target.result);
 
+        var should_resize = document.getElementById("resize-checkbox").checked;
+
         var blob = new Blob([result], { type: "application/octet-stream" });
 
         var a = document.getElementById("download-a");

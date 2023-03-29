@@ -9,7 +9,7 @@ use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn convert(image_data_url: &str) -> Result<Vec<u8>, String> {
+pub fn convert(image_data_url: &str, should_resize: bool) -> Result<Vec<u8>, String> {
     let input = include_str!("../default.json");
 
     let img = image_data_url
@@ -31,7 +31,7 @@ pub fn convert(image_data_url: &str) -> Result<Vec<u8>, String> {
 
     level.local_level.id = Uuid::new_v4();
 
-    process_image(&mut level, &img);
+    process_image(&mut level, &img, should_resize);
 
     let output = save_exolvl(&level).map_err(|e| e.to_string())?;
 
@@ -42,11 +42,11 @@ pub fn convert(image_data_url: &str) -> Result<Vec<u8>, String> {
     Ok(e.finish().map_err(|e| e.to_string())?)
 }
 
-fn process_image(level: &mut ExoLvl, img: &DynamicImage) {
+fn process_image(level: &mut ExoLvl, img: &DynamicImage, should_resize: bool) {
     // resize the image to fit in 201 x 134
     // but keep the aspect ratio
     // and if the image is smaller than 201 x 134, then don't resize it
-    let scale_factor = if img.width() > 201 || img.height() > 134 {
+    let scale_factor = if should_resize && (img.width() > 201 || img.height() > 134) {
         let scale_factor_x = 201.0 / img.width() as f32;
         let scale_factor_y = 134.0 / img.height() as f32;
 
