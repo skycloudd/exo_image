@@ -1,4 +1,4 @@
-body {
+:root {
     --text-colour: #f8f4ea;
     --lighter-text-colour: #ece8dd;
     --background-colour: #333;
@@ -6,9 +6,11 @@ body {
     --lightest-background-colour: #808080;
     --accent-color: #008cff;
     --warning-colour: #ff3333;
+}
 
-    background-color: #333;
-    color: #f8f4ea;
+body {
+    background-color: var(--background-colour);
+    color: var(--text-colour);
 }
 
 h1,
@@ -21,7 +23,7 @@ h6 {
 }
 
 table {
-    border-spacing: 0em 0.2em;
+    border-spacing: 0rem 0.2rem;
     border: 0;
 }
 
@@ -36,21 +38,17 @@ a:hover {
 }
 
 footer {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     color: var(--lighter-text-colour);
-    margin-top: 1em;
-    padding-top: 1em;
+    margin-top: 1rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--lighter-text-colour);
 }
 
 .warning {
     background-color: var(--lighter-background-colour);
     color: var(--warning-colour);
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     display: inline-block;
-}
-
-.left {
-    vertical-align: top;
 }
