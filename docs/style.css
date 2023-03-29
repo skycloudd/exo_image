@@ -5,6 +5,7 @@ body {
     --lighter-background-colour: #404040;
     --lightest-background-colour: #808080;
     --accent-color: #008cff;
+    --warning-colour: #ff3333;
 
     background-color: #333;
     color: #f8f4ea;
@@ -42,54 +43,14 @@ footer {
     border-top: 1px solid var(--lighter-text-colour);
 }
 
+.warning {
+    background-color: var(--lighter-background-colour);
+    color: var(--warning-colour);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    display: inline-block;
+}
+
 .left {
     vertical-align: top;
-}
-
-.red {
-    color: #FF3333;
-}
-
-.orange {
-    color: #FFAE33;
-}
-
-.yellow {
-    color: #FFFF33;
-}
-
-.green {
-    color: #33FF33;
-}
-
-.cyan {
-    color: #33FFFF;
-}
-
-.blue {
-    color: #3333FF;
-}
-
-.purple {
-    color: #8633FF;
-}
-
-.pink {
-    color: #FF33FF;
-}
-
-.white {
-    color: #FFF;
-}
-
-.grey {
-    color: #B3B3B3;
-}
-
-.black {
-    color: #000000;
-}
-
-.brown {
-    color: #784826;
 }
