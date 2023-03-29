@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Exo Image</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+</head>
+
+<body>
+    <script defer src="./index.js" type="module"></script>
+
+    <h1>
+        Exo Image
+    </h1>
+
+    <table>
+        <tr>
+            <td>
+                <label for="image-upload">Upload image</label>
+            </td>
+            <td>
+                <input type="file" id="image-upload" name="image-upload" accept="image/*">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="text">Background</label>
+            </td>
+            <td>
+                <input type="text" id="background-color" name="background-color" placeholder="#rrggbb" value="#000000">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="generate-button">Generate</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="download-a">
+                    <button id="download-button" disabled>Download</button>
+                </a>
+            </td>
+        </tr>
+</body>
+
+</html>

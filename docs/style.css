@@ -1,0 +1,61 @@
+body {
+    background-color: #333;
+    color: #f8f4ea;
+}
+
+textarea {
+    background-color: #222;
+    color: #f8f4ea;
+}
+
+.left {
+    vertical-align: top;
+}
+
+.red {
+    color: #FF3333;
+}
+
+.orange {
+    color: #FFAE33;
+}
+
+.yellow {
+    color: #FFFF33;
+}
+
+.green {
+    color: #33FF33;
+}
+
+.cyan {
+    color: #33FFFF;
+}
+
+.blue {
+    color: #3333FF;
+}
+
+.purple {
+    color: #8633FF;
+}
+
+.pink {
+    color: #FF33FF;
+}
+
+.white {
+    color: #FFF;
+}
+
+.grey {
+    color: #B3B3B3;
+}
+
+.black {
+    color: #000000;
+}
+
+.brown {
+    color: #784826;
+}

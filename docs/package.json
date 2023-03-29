@@ -1,0 +1,12 @@
+{
+  "name": "exo_image",
+  "version": "0.1.0",
+  "files": [
+    "exo_image_bg.wasm",
+    "exo_image.js",
+    "exo_image.d.ts"
+  ],
+  "module": "exo_image.js",
+  "types": "exo_image.d.ts",
+  "sideEffects": false
+}
