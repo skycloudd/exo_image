@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'CascadiaCode';
+    src: url("./fonts/CascadiaCode.ttf");
+    display: swap;
+}
+
 :root {
     --text-colour: #f8f4ea;
     --lighter-text-colour: #ece8dd;
@@ -5,12 +11,14 @@
     --lighter-background-colour: #404040;
     --lightest-background-colour: #808080;
     --accent-color: #008cff;
+    --light-accent-color: #00aaff;
     --warning-colour: #ff3333;
 }
 
 body {
     background-color: var(--background-colour);
     color: var(--text-colour);
+    font-family: 'CascadiaCode', monospace;
 }
 
 h1,
@@ -22,8 +30,37 @@ h6 {
     color: var(--accent-color);
 }
 
+button {
+    background-color: var(--accent-color);
+    color: var(--text-colour);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: 'CascadiaCode', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--light-accent-color);
+}
+
+button:disabled {
+    background-color: var(--lighter-background-colour);
+    color: var(--lighter-text-colour);
+    cursor: not-allowed;
+}
+
+input {
+    background-color: var(--lighter-background-colour);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: 'CascadiaCode', monospace;
+    font-size: 1rem;
+}
+
 table {
-    border-spacing: 0rem 0.2rem;
     border: 0;
 }
 
