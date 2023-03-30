@@ -15,6 +15,10 @@
     --warning-colour: #ff3333;
 }
 
+html {
+    padding: 1rem 1rem 0 0;
+}
+
 body {
     background-color: var(--background-colour);
     color: var(--text-colour);
@@ -23,7 +27,7 @@ body {
     display: grid;
 
     max-width: 500px;
-    margin: 0 auto;
+    margin: auto;
     word-wrap: break-word;
 }
 
