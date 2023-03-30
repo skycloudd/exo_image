@@ -23,40 +23,33 @@
         ⚠️ Only works on version 1.10 or later ⚠️
     </p>
 
-    <table>
-        <tr>
-            <td>
-                <label for="image-upload">Upload image</label>
-            </td>
-            <td>
-                <input type="file" id="image-upload" name="image-upload" accept="image/*">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="resize-checkbox">Resize?</label>
-            </td>
-            <td>
-                <input type="checkbox" id="resize-checkbox" name="resize-checkbox" checked>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button id="generate-button">Generate</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a id="download-a">
-                    <button id="download-button" disabled>Download</button>
-                </a>
-            </td>
-        </tr>
-    </table>
+    <h2>
+        Upload image
+    </h2>
+
+    <input type="file" id="image-upload" name="image-upload" accept="image/*">
+
+    <h2>
+        Resize
+    </h2>
+
+    <label for="resize">Resize to thumbnail</label>
+    <input type="checkbox" id="resize-checkbox" name="resize-checkbox" checked>
+
+    <h2>
+        Generate and download
+    </h2>
+
+    <button id="generate-button">Generate</button>
+
+    <a id="download-a">
+        <button id="download-button" disabled>Download</button>
+    </a>
 
     <h2>
         How to use
     </h2>
+
     <ol>
         <li>Upload an image</li>
         <li>Choose whether to automatically resize the image to fit in a thumbnail</li>
