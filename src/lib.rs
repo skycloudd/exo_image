@@ -46,6 +46,10 @@ fn process_image(level: &mut ExoLvl, img: &DynamicImage, should_resize: bool) {
     // resize the image to fit in 201 x 134
     // but keep the aspect ratio
     // and if the image is smaller than 201 x 134, then don't resize it
+    //
+    // android: approximately 201 x 134
+    // ios:     approximately 185 × 124
+    // pain     ^^^^^^^^^^^^^^^^^^^^^^^
     let scale_factor = if should_resize && (img.width() > 201 || img.height() > 134) {
         let scale_factor_x = 201.0 / img.width() as f32;
         let scale_factor_y = 134.0 / img.height() as f32;

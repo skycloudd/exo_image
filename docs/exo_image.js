@@ -115,14 +115,15 @@ function getArrayU8FromWasm0(ptr, len) {
 }
 /**
 * @param {string} image_data_url
+* @param {boolean} should_resize
 * @returns {Uint8Array}
 */
-export function convert(image_data_url) {
+export function convert(image_data_url, should_resize) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passStringToWasm0(image_data_url, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len0 = WASM_VECTOR_LEN;
-        wasm.convert(retptr, ptr0, len0);
+        wasm.convert(retptr, ptr0, len0, should_resize);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
         var r2 = getInt32Memory0()[retptr / 4 + 2];

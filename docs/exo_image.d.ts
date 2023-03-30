@@ -2,15 +2,16 @@
 /* eslint-disable */
 /**
 * @param {string} image_data_url
+* @param {boolean} should_resize
 * @returns {Uint8Array}
 */
-export function convert(image_data_url: string): Uint8Array;
+export function convert(image_data_url: string, should_resize: boolean): Uint8Array;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly convert: (a: number, b: number, c: number) => void;
+  readonly convert: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
