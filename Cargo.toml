@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 base64 = "0.21.0"
+chrono = "0.4.24"
 exolvl = { git = "https://github.com/skycloudd/exolvl", version = "0.2.0" }
 flate2 = "1.0.25"
 image = "0.24.6"

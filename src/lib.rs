@@ -9,7 +9,11 @@ use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn convert(image_data_url: &str, should_resize: bool) -> Result<Vec<u8>, String> {
+pub fn convert(
+    image_data_url: &str,
+    should_resize: bool,
+    level_name: &str,
+) -> Result<Vec<u8>, String> {
     let input = include_str!("../default.json");
 
     let img = image_data_url
@@ -29,7 +33,12 @@ pub fn convert(image_data_url: &str, should_resize: bool) -> Result<Vec<u8>, Str
 
     let mut level = load_exolvl(input).map_err(|e| e.to_string())?;
 
+    let created_time = chrono::Utc::now();
+
     level.local_level.id = Uuid::new_v4();
+    level.local_level.name = level_name.to_string();
+    level.local_level.creation_date = created_time;
+    level.local_level.update_date = created_time;
 
     process_image(&mut level, &img, should_resize);
 
