@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Exo Image</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:url" content="https://yycd.nl/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Exo Image " />
+    <meta property="og:description" content="Easily convert images to .exolvl files" />
+</head>
+
+<body>
+    <script defer src="./index.js" type="module"></script>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1>
+                Exo Image
+            </h1>
+
+            <h2>
+                Upload image
+            </h2>
+
+            <input type="file" id="image-upload" name="image-upload" accept="image/*">
+        </div>
+        <div class="grid-item">
+            <h2>
+                Settings
+            </h2>
+
+            <label for="resize">Resize to thumbnail</label>
+            <input type="checkbox" id="resize-checkbox" name="resize-checkbox" checked>
+        </div>
+        <div class="grid-item">
+            <h2>
+                Generate and download
+            </h2>
+
+            <button id="generate-button">Generate</button>
+
+            <a id="download-a">
+                <button id="download-button" disabled>Download</button>
+            </a>
+        </div>
+        <div class="grid-item">
+            <h2>
+                How to use
+            </h2>
+
+            <ol>
+                <li>Upload an image</li>
+                <li>Choose whether to automatically resize the image to fit in a thumbnail</li>
+                <li>Click "Generate"</li>
+                <li>Click "Download"</li>
+                <li>Import it with "Import level" in Exoracer</li>
+            </ol>
+
+            <footer>
+                <p>
+                    Source code available on <a href="https://github.com/skycloudd/exo_image">GitHub</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

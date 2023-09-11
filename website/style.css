@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'CascadiaCode';
+    src: url("./fonts/CascadiaCode.ttf");
+    display: swap;
+}
+
+:root {
+    --text-colour: #f8f4ea;
+    --lighter-text-colour: #ece8dd;
+    --background-colour: #333;
+    --lighter-background-colour: #404040;
+    --lightest-background-colour: #808080;
+    --accent-color: #008cff;
+    --light-accent-color: #00aaff;
+    --warning-colour: #ff3333;
+}
+
+html {
+    padding: 0 1rem;
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    font-family: 'CascadiaCode', monospace;
+
+    display: grid;
+
+    max-width: 500px;
+    margin: auto;
+    word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-colour);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.4rem 1rem;
+    margin: 0.4rem 0;
+    font-family: 'CascadiaCode', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--light-accent-color);
+}
+
+button:disabled {
+    background-color: var(--lighter-background-colour);
+    color: var(--lighter-text-colour);
+    cursor: not-allowed;
+}
+
+input {
+    background-color: var(--lighter-background-colour);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: 'CascadiaCode', monospace;
+}
+
+table {
+    border: 0;
+}
+
+a:link,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: var(--lighter-text-colour);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--lighter-text-colour);
+}
+
+.warning {
+    background-color: var(--lighter-background-colour);
+    color: var(--warning-colour);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
