@@ -1,2 +1,2 @@
 #!/bin/sh
-wasm-pack build --target web --out-dir website
+wasm-pack build --target web --out-dir docs
