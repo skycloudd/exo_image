@@ -52,24 +52,11 @@ pub fn convert(
 }
 
 fn process_image(level: &mut ExoLvl, img: &DynamicImage, should_resize: bool) {
-    let scale_factor = if should_resize && (img.width() > 201 || img.height() > 134) {
-        let scale_factor_x = 201.0 / img.width() as f32;
-        let scale_factor_y = 134.0 / img.height() as f32;
-
-        if scale_factor_x < scale_factor_y {
-            scale_factor_x
-        } else {
-            scale_factor_y
-        }
+    let img = if should_resize {
+        img.resize(201, 134, FilterType::Lanczos3)
     } else {
-        1.0
+        img.clone()
     };
-
-    let img = img.resize(
-        (img.width() as f32 * scale_factor) as u32,
-        (img.height() as f32 * scale_factor) as u32,
-        FilterType::Lanczos3,
-    );
 
     let pixels = img.pixels();
 

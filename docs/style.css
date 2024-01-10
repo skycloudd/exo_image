@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'CascadiaCode';
+    font-family: "CascadiaCode";
     src: url("./fonts/CascadiaCode.ttf");
     display: swap;
 }
@@ -22,7 +22,7 @@ html {
 body {
     background-color: var(--background-colour);
     color: var(--text-colour);
-    font-family: 'CascadiaCode', monospace;
+    font-family: "CascadiaCode", monospace;
 
     display: grid;
 
@@ -47,7 +47,7 @@ button {
     border-radius: 0.5rem;
     padding: 0.4rem 1rem;
     margin: 0.4rem 0;
-    font-family: 'CascadiaCode', monospace;
+    font-family: "CascadiaCode", monospace;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -67,7 +67,7 @@ input {
     border: 0;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    font-family: 'CascadiaCode', monospace;
+    font-family: "CascadiaCode", monospace;
 }
 
 table {

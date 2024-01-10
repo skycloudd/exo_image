@@ -8,5 +8,7 @@
   ],
   "module": "exo_image.js",
   "types": "exo_image.d.ts",
-  "sideEffects": false
+  "sideEffects": [
+    "./snippets/*"
+  ]
 }
